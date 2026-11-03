@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kyln · Tech studio, Brisbane</title>
+<meta name="description" content="Kyln is a Brisbane tech studio. IT and Microsoft 365 support, websites, apps and AI automation for small businesses.">
+<meta name="theme-color" content="#121214">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="Kyln · Tech studio, Brisbane">
+<meta property="og:description" content="IT and Microsoft 365 support, websites, apps and AI automation for small businesses.">
+<meta property="og:image" content="https://kyln.com.au/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Outfit:wght@400;700&display=swap">
+<style>
+:root {
+  --bg: #121214; --surface: #1C1C1F; --line: #2E2E33;
+  --text: #EDEBE8; --muted: #9A9893;
+  --accent: #FF3B6B; --accent-soft: #3A1520; --accent-link: #FF5C84;
+  --sans: "Outfit", system-ui, sans-serif; --mono: "Geist Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--text); background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M64 0H0V64' fill='none' stroke='%23EDEBE8' stroke-opacity='.035'/%3E%3C/svg%3E");
+  font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent-link); outline-offset: 3px; border-radius: 4px; }
+.in { max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 6vw, 96px); }
+.label { font: 400 12px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+
+/* Header */
+header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+header .in { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { display: block; width: 92px; }
+.logo svg { display: block; width: 100%; height: auto; }
+nav { display: flex; gap: 32px; align-items: center; }
+nav a { text-decoration: none; padding: 12px 0; }
+nav a:not(.pill) { font: 400 12px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+nav a:not(.pill):hover { color: var(--text); }
+
+/* Buttons */
+.pill { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 26px; border-radius: 999px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s, border-color .2s; }
+.pill.primary { background: var(--accent); color: var(--bg); }
+.pill.primary:hover { background: var(--text); }
+.pill.ghost { border: 1px solid var(--line); color: var(--text); }
+.pill.ghost:hover { border-color: var(--text); }
+header .pill { min-height: 44px; padding: 0 20px; border: 1px solid var(--line); color: var(--text); }
+header .pill:hover { border-color: var(--text); }
+
+/* Dot rail */
+.rail { position: fixed; left: 24px; top: 50%; transform: translateY(-50%); display: grid; gap: 22px; z-index: 5; }
+.rail a { display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: background .3s; }
+.rail a.on { background: var(--accent); }
+
+/* Hero */
+.hero { padding: clamp(72px, 12vw, 152px) 0 clamp(72px, 10vw, 128px); }
+.hero .in { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: end; }
+h1 { font: 700 clamp(44px, 7vw, 88px)/1.0 var(--sans); letter-spacing: -.025em; margin: 24px 0 32px; }
+h1 span { color: var(--muted); }
+.lede { font-size: 19px; line-height: 1.6; max-width: 40ch; margin: 0 0 40px; color: var(--text); }
+.ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+.arch { justify-self: end; width: 100%; max-width: 360px; }
+.arch svg { display: block; width: 100%; height: auto; }
+.arch .bar { animation: glow 3.2s ease-in-out infinite; }
+@keyframes glow { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+
+/* Ticker of figures */
+.facts { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.facts .in { display: grid; grid-template-columns: repeat(4, 1fr); }
+.facts div { padding: 28px 0; border-left: 1px solid var(--line); padding-left: 24px; }
+.facts div:first-child { border-left: 0; padding-left: 0; }
+.facts b { display: block; font: 700 28px/1.1 var(--sans); font-variant-numeric: tabular-nums; margin-bottom: 8px; }
+
+/* Sections */
+section.sec { padding: clamp(80px, 10vw, 128px) 0; border-top: 1px solid var(--line); }
+.head { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; margin: 20px 0 64px; }
+h2 { font: 700 clamp(36px, 5vw, 48px)/1.05 var(--sans); letter-spacing: -.02em; margin: 0; }
+.head p { margin: 0; justify-self: end; max-width: 38ch; color: var(--muted); font-size: 16px; }
+
+/* Service cards */
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 300px; padding: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: opacity .3s, border-color .3s; }
+.card.feat { border-color: var(--accent); }
+@media (hover: hover) { .cards:hover .card:not(:hover) { opacity: .45; } }
+.card h3 { font: 700 28px/1.15 var(--sans); margin: 14px 0 12px; letter-spacing: -.01em; }
+.card p { margin: 0; color: var(--muted); }
+.card ul { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.card li { font: 400 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.card .num { position: absolute; top: 28px; right: 28px; font: 400 12px/1 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Process index rows */
+.rows { border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 80px 1fr 1.4fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.row .label { font-variant-numeric: tabular-nums; }
+.row h3 { font: 700 28px/1.15 var(--sans); margin: 0; }
+.row p { margin: 0; color: var(--muted); }
+
+/* About */
+.about { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; }
+.about p { font-size: 19px; margin: 0 0 20px; max-width: 52ch; }
+.about p.muted { color: var(--muted); font-size: 16px; }
+
+/* Contact */
+.contact h2 { font-size: clamp(44px, 7vw, 72px); line-height: 1; max-width: 14ch; margin: 20px 0 40px; }
+.contact .mail { font: 700 clamp(22px, 3vw, 28px)/1.2 var(--sans); color: var(--accent-link); text-decoration: none; border-bottom: 1px solid currentColor; }
+.contact .mail:hover { color: var(--text); }
+.contact .meta { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 56px; }
+.contact .meta a { text-decoration: none; }
+.contact .meta a:hover { color: var(--text); }
+
+footer { border-top: 1px solid var(--line); }
+footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 28px; padding-bottom: 28px; }
+
+@media (max-width: 900px) {
+  .hero .in, .head, .about { grid-template-columns: 1fr; }
+  .head p { justify-self: start; }
+  .arch { justify-self: start; max-width: 200px; order: -1; }
+  .cards { grid-template-columns: 1fr; }
+  .facts .in { grid-template-columns: repeat(2, 1fr); }
+  .facts div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .facts div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .row { grid-template-columns: 56px 1fr; }
+  .row p { grid-column: 2; }
+  .rail { display: none; }
+  nav a:not(.pill) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .arch .bar { animation: none; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="in">
+    <a class="logo" href="#top" aria-label="Kyln home">
+      <svg viewBox="54 34 1722 931" aria-hidden="true"><path d="M365 760 195 508 364 274H535L331 537L336 474L545 760ZM54 760V34H207V760Z M719 762 519 274H684L811 661H750L880 274H1045L837 762ZM594 965 740 650 837 762 751 965Z M1072 760V34H1225V760Z" fill="#EDEBE8"/><path d="M1302,760 V507.0 A237.0,237.0 0 0 1 1776,507.0 V760 Z M1455,760 V484.0 A84.0,84.0 0 0 1 1623,484.0 V760 Z" fill="#EDEBE8" fill-rule="evenodd"/><rect x="1492.0" y="611.6" width="94.1" height="64.3" fill="#FF3B6B"/></svg>
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a class="pill" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="rail" aria-hidden="true">
+  <a href="#top" tabindex="-1" class="on"></a><a href="#services" tabindex="-1"></a><a href="#process" tabindex="-1"></a><a href="#about" tabindex="-1"></a><a href="#contact" tabindex="-1"></a>
+</div>
+
+<main>
+  <section class="hero" id="top">
+    <div class="in">
+      <div>
+        <div class="label">Tech studio · Brisbane</div>
+        <h1>Technology for small business, <span>made properly.</span></h1>
+        <p class="lede">Kyln looks after the IT, builds the website and automates the busywork, so a small team can run like a bigger one.</p>
+        <div class="ctas">
+          <a class="pill primary" href="#contact">Start a project →</a>
+          <a class="pill ghost" href="#services">See services</a>
+        </div>
+      </div>
+      <div class="arch" aria-hidden="true">
+        <svg viewBox="0 0 474 490"><path d="M0,490 V237.0 A237.0,237.0 0 0 1 474,237.0 V490 Z M153,490 V214.0 A84.0,84.0 0 0 1 321,214.0 V490 Z" fill="#1C1C1F" stroke="#2E2E33" stroke-width="2" fill-rule="evenodd"/><rect class="bar" x="190.0" y="341.6" width="94.1" height="64.3" fill="#FF3B6B"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="in">
+      <div><b>04</b><span class="label">Disciplines</span></div>
+      <div><b>M365</b><span class="label">Admin and support</span></div>
+      <div><b>1</b><span class="label">Point of contact</span></div>
+      <div><b>BNE</b><span class="label">Based in Nundah</span></div>
+    </div>
+  </div>
+
+  <section class="sec" id="services">
+    <div class="in">
+      <div class="label">01 / Services</div>
+      <div class="head">
+        <h2>Four things,<br>done well.</h2>
+        <p>Most clients start with one and add the rest as they grow. It all comes from the same person, so nothing falls between suppliers.</p>
+      </div>
+      <div class="cards">
+        <article class="card feat">
+          <span class="num">01</span>
+          <div>
+            <div class="label">Managed services</div>
+            <h3>IT and Microsoft 365</h3>
+            <p>Accounts, licences, email, security settings and the day-to-day questions. Set up correctly once, then kept that way.</p>
+          </div>
+          <ul><li>M365 admin</li><li>Security</li><li>Support</li></ul>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <div>
+            <div class="label">Web</div>
+            <h3>Websites</h3>
+            <p>Fast, clear sites on Wix, WordPress or hand-built code, with copy that says what you do and a page structure that gets enquiries.</p>
+          </div>
+          <ul><li>Wix</li><li>WordPress</li><li>Static</li></ul>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <div>
+            <div class="label">Product</div>
+            <h3>App development</h3>
+            <p>Web and mobile apps for a specific job: bookings, rosters, payments, internal tools. Scoped small, shipped, then improved.</p>
+          </div>
+          <ul><li>Web apps</li><li>Mobile</li><li>Internal tools</li></ul>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <div>
+            <div class="label">Automation</div>
+            <h3>AI agents and automation</h3>
+            <p>Agents and workflows that handle the repetitive work: reports, data entry, triage and follow-ups, with a person checking what matters.</p>
+          </div>
+          <ul><li>AI agents</li><li>Workflows</li><li>Reporting</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="process">
+    <div class="in">
+      <div class="label">02 / Process</div>
+      <div class="head">
+        <h2>How a job<br>runs.</h2>
+        <p>Fixed scope, a clear price up front, and plain updates along the way.</p>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="label">001</span><h3>Talk</h3><p>A short call about what is slowing you down and what a good result looks like.</p></div>
+        <div class="row"><span class="label">002</span><h3>Scope</h3><p>A written proposal with what is included, what is not, the timeline and the cost.</p></div>
+        <div class="row"><span class="label">003</span><h3>Build</h3><p>Work happens in small, visible steps. You see progress early and can change direction.</p></div>
+        <div class="row"><span class="label">004</span><h3>Hand over</h3><p>Documentation, logins and training, plus ongoing support if you want it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="in">
+      <div class="label">03 / About</div>
+      <div class="about" style="margin-top:20px">
+        <h2>A studio of one, with enterprise habits.</h2>
+        <div>
+          <p>Kyln is run by Kyle Lancelot, a Digital Solutions Specialist based in Nundah, Brisbane.</p>
+          <p class="muted">His day job is in business IT for a large organisation: Microsoft 365 administration, Purview eDiscovery and ServiceNow knowledge management. Kyln brings the same standards to small businesses, without the overhead.</p>
+          <p class="muted">A kiln is where things get made properly and come out finished. That is the idea.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="in">
+      <div class="label">04 / Contact</div>
+      <h2>Tell me what you're working on.</h2>
+      <a class="mail" href="mailto:kyle@kyln.com.au">kyle@kyln.com.au</a>
+      <div class="meta">
+        <a class="label" href="https://instagram.com/kyln.com.au">Instagram · @kyln.com.au</a>
+        <span class="label">Nundah, Brisbane QLD</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <span class="label">© 2026 Kyln</span>
+    <span class="label">kyln.com.au</span>
+  </div>
+</footer>
+
+<script>
+/* Dot rail tracks the section in view. */
+(function () {
+  const dots = [...document.querySelectorAll(".rail a")];
+  const map = new Map(dots.map(d => [d.getAttribute("href").slice(1), d]));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      dots.forEach(d => d.classList.remove("on"));
+      const d = map.get(e.target.id); if (d) d.classList.add("on");
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
+})();
+</script>
+</body>
+</html>
