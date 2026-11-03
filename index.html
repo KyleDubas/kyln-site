@@ -96,7 +96,7 @@ h2 { font: 700 clamp(36px, 5vw, 48px)/1.05 var(--sans); letter-spacing: -.02em; 
 
 /* Process index rows */
 .rows { border-top: 1px solid var(--line); }
-.row { display: grid; grid-template-columns: 80px 1fr 1.4fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.row { display: grid; grid-template-columns: 120px 1fr 1.4fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
 .row .label { font-variant-numeric: tabular-nums; }
 .row h3 { font: 700 28px/1.15 var(--sans); margin: 0; }
 .row p { margin: 0; color: var(--muted); }
@@ -108,8 +108,11 @@ h2 { font: 700 clamp(36px, 5vw, 48px)/1.05 var(--sans); letter-spacing: -.02em; 
 
 /* Contact */
 .contact h2 { font-size: clamp(44px, 7vw, 72px); line-height: 1; max-width: 14ch; margin: 20px 0 40px; }
-.contact .mail { font: 700 clamp(22px, 3vw, 28px)/1.2 var(--sans); color: var(--accent-link); text-decoration: none; border-bottom: 1px solid currentColor; }
-.contact .mail:hover { color: var(--text); }
+.note { margin: 20px 0 0; }
+.contact-lede { font-size: 19px; color: var(--muted); max-width: 46ch; margin: -16px 0 36px; }
+.contact .ctas { align-items: center; gap: 28px; }
+.contact .mail { font: 700 clamp(22px, 3vw, 28px)/1.2 var(--sans); color: var(--text); text-decoration: none; border-bottom: 1px solid var(--line); }
+.contact .mail:hover { border-color: var(--text); }
 .contact .meta { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 56px; }
 .contact .meta a { text-decoration: none; }
 .contact .meta a:hover { color: var(--text); }
@@ -147,14 +150,15 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
     <nav aria-label="Main">
       <a href="#services">Services</a>
       <a href="#process">Process</a>
+      <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a class="pill" href="#contact">Contact</a>
+      <a class="pill" href="#contact">Book a call</a>
     </nav>
   </div>
 </header>
 
 <div class="rail" aria-hidden="true">
-  <a href="#top" tabindex="-1" class="on"></a><a href="#services" tabindex="-1"></a><a href="#process" tabindex="-1"></a><a href="#about" tabindex="-1"></a><a href="#contact" tabindex="-1"></a>
+  <a href="#top" tabindex="-1" class="on"></a><a href="#services" tabindex="-1"></a><a href="#process" tabindex="-1"></a><a href="#work" tabindex="-1"></a><a href="#about" tabindex="-1"></a><a href="#contact" tabindex="-1"></a>
 </div>
 
 <main>
@@ -163,11 +167,12 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
       <div>
         <div class="label">Tech studio · Brisbane</div>
         <h1>Technology for small business, <span>made properly.</span></h1>
-        <p class="lede">Kyln looks after the IT, builds the website and automates the busywork, so a small team can run like a bigger one.</p>
+        <p class="lede">Kyln looks after your IT, builds your website and takes the repetitive admin off your plate, so you can get back to the work you’re actually paid for.</p>
         <div class="ctas">
-          <a class="pill primary" href="#contact">Start a project →</a>
+          <a class="pill primary" href="#contact">Book a free 30-min call →</a>
           <a class="pill ghost" href="#services">See services</a>
         </div>
+        <p class="note label">No obligation. You leave with a plan either way.</p>
       </div>
       <div class="arch" aria-hidden="true">
         <svg viewBox="0 0 474 490"><path d="M0,490 V237.0 A237.0,237.0 0 0 1 474,237.0 V490 Z M153,490 V214.0 A84.0,84.0 0 0 1 321,214.0 V490 Z" fill="#1C1C1F" stroke="#2E2E33" stroke-width="2" fill-rule="evenodd"/><rect class="bar" x="190.0" y="341.6" width="94.1" height="64.3" fill="#FF3B6B"/></svg>
@@ -177,10 +182,10 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
 
   <div class="facts">
     <div class="in">
-      <div><b>04</b><span class="label">Disciplines</span></div>
-      <div><b>M365</b><span class="label">Admin and support</span></div>
-      <div><b>1</b><span class="label">Point of contact</span></div>
-      <div><b>BNE</b><span class="label">Based in Nundah</span></div>
+      <div><b>30 min</b><span class="label">Free first call</span></div>
+      <div><b>Fixed</b><span class="label">Quote before work starts</span></div>
+      <div><b>1</b><span class="label">Person, start to finish</span></div>
+      <div><b>Nundah</b><span class="label">Local to Brisbane</span></div>
     </div>
   </div>
 
@@ -189,7 +194,7 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
       <div class="label">01 / Services</div>
       <div class="head">
         <h2>Four things,<br>done well.</h2>
-        <p>Most clients start with one and add the rest as they grow. It all comes from the same person, so nothing falls between suppliers.</p>
+        <p>Most people start with one and add the rest later. It all comes from the same person, so nothing falls between suppliers.</p>
       </div>
       <div class="cards">
         <article class="card feat">
@@ -197,7 +202,7 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
           <div>
             <div class="label">Managed services</div>
             <h3>IT and Microsoft 365</h3>
-            <p>Accounts, licences, email, security settings and the day-to-day questions. Set up correctly once, then kept that way.</p>
+            <p>Email that works, licences you’re not overpaying for, and security settings that are actually switched on. Set up properly once, then kept that way.</p>
           </div>
           <ul><li>M365 admin</li><li>Security</li><li>Support</li></ul>
         </article>
@@ -224,7 +229,7 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
           <div>
             <div class="label">Automation</div>
             <h3>AI agents and automation</h3>
-            <p>Agents and workflows that handle the repetitive work: reports, data entry, triage and follow-ups, with a person checking what matters.</p>
+            <p>The weekly report, the copy-paste data entry, the follow-up email nobody sends. Handed to an agent or workflow, with a person checking what matters.</p>
           </div>
           <ul><li>AI agents</li><li>Workflows</li><li>Reporting</li></ul>
         </article>
@@ -240,23 +245,38 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
         <p>Fixed scope, a clear price up front, and plain updates along the way.</p>
       </div>
       <div class="rows">
-        <div class="row"><span class="label">001</span><h3>Talk</h3><p>A short call about what is slowing you down and what a good result looks like.</p></div>
-        <div class="row"><span class="label">002</span><h3>Scope</h3><p>A written proposal with what is included, what is not, the timeline and the cost.</p></div>
+        <div class="row"><span class="label">001</span><h3>Talk</h3><p>A free 30-minute call about what’s slowing you down and what a good result looks like. No obligation.</p></div>
+        <div class="row"><span class="label">002</span><h3>Scope</h3><p>A written proposal with what’s included, what isn’t, the timeline and a fixed price. Nothing starts until you agree to it.</p></div>
         <div class="row"><span class="label">003</span><h3>Build</h3><p>Work happens in small, visible steps. You see progress early and can change direction.</p></div>
         <div class="row"><span class="label">004</span><h3>Hand over</h3><p>Documentation, logins and training, plus ongoing support if you want it.</p></div>
       </div>
     </div>
   </section>
 
+  <section class="sec" id="work">
+    <div class="in">
+      <div class="label">03 / Recent work</div>
+      <div class="head">
+        <h2>What it looks<br>like in practice.</h2>
+        <p>Client names kept private. Happy to talk through any of these on a call.</p>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="label">Reporting</span><h3>Monthly marketing reports</h3><p>Email campaign results pulled together and explained in plain English each month for a Brisbane business, so the owner sees what worked without logging in to anything.</p></div>
+        <div class="row"><span class="label">Web</span><h3>Community club website</h3><p>A site for a local sports club that volunteers can update themselves, including fixtures, contacts and a register of player numbers.</p></div>
+        <div class="row"><span class="label">IT</span><h3>Microsoft 365 clean-ups</h3><p>Unused licences removed, shared mailboxes sorted out, multi-factor sign-in turned on for everyone.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="about">
     <div class="in">
-      <div class="label">03 / About</div>
+      <div class="label">04 / About</div>
       <div class="about" style="margin-top:20px">
-        <h2>A studio of one, with enterprise habits.</h2>
+        <h2>Hi, I’m Kyle.</h2>
         <div>
-          <p>Kyln is run by Kyle Lancelot, a Digital Solutions Specialist based in Nundah, Brisbane.</p>
-          <p class="muted">His day job is in business IT for a large organisation: Microsoft 365 administration, Purview eDiscovery and ServiceNow knowledge management. Kyln brings the same standards to small businesses, without the overhead.</p>
-          <p class="muted">A kiln is where things get made properly and come out finished. That is the idea.</p>
+          <p>I run Kyln from Nundah, on Brisbane’s northside. When you get in touch, you deal with me, and I’m the one doing the work.</p>
+          <p class="muted">Outside of client work I play inline and ice hockey, and I’m currently training for Hyrox and a half marathon. At home there’s a server in the cupboard running Home Assistant and whatever I’m tinkering with that month, which is usually where new ideas get tested before they go anywhere near a client.</p>
+          <p class="muted">The rest of the time it’s a decent espresso, the veggie garden, five chooks and a cat called Mochi who thinks the keyboard is hers.</p>
         </div>
       </div>
     </div>
@@ -264,9 +284,13 @@ footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap
 
   <section class="sec contact" id="contact">
     <div class="in">
-      <div class="label">04 / Contact</div>
-      <h2>Tell me what you're working on.</h2>
-      <a class="mail" href="mailto:kyle@kyln.com.au">kyle@kyln.com.au</a>
+      <div class="label">05 / Contact</div>
+      <h2>Book a free <span style="white-space:nowrap">30-minute</span> call.</h2>
+      <p class="contact-lede">Send a couple of lines about what you need and I’ll suggest a time. No obligation, and you’ll come away with a clear next step either way.</p>
+      <div class="ctas">
+        <a class="pill primary" href="mailto:kyle@kyln.com.au?subject=Free%2030-minute%20call">Book a call →</a>
+        <a class="mail" href="mailto:kyle@kyln.com.au">kyle@kyln.com.au</a>
+      </div>
       <div class="meta">
         <a class="label" href="https://instagram.com/kyln.com.au">Instagram · @kyln.com.au</a>
         <span class="label">Nundah, Brisbane QLD</span>
