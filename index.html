@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kyln · Tech studio, Brisbane</title>
-<meta name="description" content="Kyln is a Brisbane tech studio. IT and Microsoft 365 support, websites, apps and AI automation for small businesses.">
+<meta name="description" content="Kyln is a Brisbane tech studio for small businesses: Microsoft 365 and security, devices, domains and Cloudflare, websites and online stores, and automation.">
 <meta name="theme-color" content="#121214">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:title" content="Kyln · Tech studio, Brisbane">
-<meta property="og:description" content="IT and Microsoft 365 support, websites, apps and AI automation for small businesses.">
+<meta property="og:description" content="Microsoft 365 and security, devices, domains, websites and automation for Brisbane small businesses.">
 <meta property="og:image" content="https://kyln.com.au/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,6 +95,7 @@ h2 { font: 700 clamp(36px, 5vw, 48px)/1.05 var(--sans); letter-spacing: -.02em; 
 .card { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: clamp(240px, 26vw, 300px); padding: clamp(22px, 2.4vw, 28px); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: opacity .3s, border-color .3s; }
 .card.feat { border-color: var(--accent); }
 @media (hover: hover) { .cards:hover .card:not(:hover) { opacity: .45; } }
+.limits { margin: 28px 0 0; max-width: 70ch; }
 .card h3 { font: 700 clamp(24px, 2.4vw, 28px)/1.15 var(--sans); margin: 14px 0 12px; letter-spacing: -.01em; }
 .card p { margin: 0; color: var(--muted); }
 .card ul { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -218,7 +219,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
       <div>
         <div class="label">Tech studio · Brisbane</div>
         <h1>Technology for small business, <span>made properly.</span></h1>
-        <p class="lede">Kyln looks after your IT, builds your website and takes the repetitive admin off your plate, so you can get back to the work you’re actually paid for.</p>
+        <p class="lede">Kyln secures your Microsoft 365 and devices, looks after your domains and website, and takes the repetitive admin off your plate, so you can get back to the work you’re actually paid for.</p>
         <div class="ctas">
           <a class="pill primary" href="#contact">Book a free 30-min call →</a>
           <a class="pill ghost" href="#services">See services</a>
@@ -244,47 +245,66 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
     <div class="in">
       <div class="label">01 / Services</div>
       <div class="head">
-        <h2>Four things,<br>done well.</h2>
-        <p>Most people start with one and add the rest later. It all comes from the same person, so nothing falls between suppliers.</p>
+        <h2>Your whole setup,<br>one person.</h2>
+        <p>Most businesses start with one of these and add the rest later. Security comes first in all of it, and nothing falls between suppliers.</p>
       </div>
       <div class="cards">
         <article class="card feat">
           <span class="num">01</span>
           <div>
-            <div class="label">Managed services</div>
-            <h3>IT and Microsoft 365</h3>
-            <p>Email that works, licences you’re not overpaying for, and security settings that are actually switched on. Set up properly once, then kept that way.</p>
+            <div class="label">Security</div>
+            <h3>Microsoft 365 and security</h3>
+            <p>Multi-factor sign-in enforced for everyone, staff given access to what they need and nothing more, and email set up so scammers can’t send as your business. Plus Essential Eight reviews with a prioritised list of fixes.</p>
           </div>
-          <ul><li>M365 admin</li><li>Security</li><li>Support</li></ul>
+          <ul><li>M365</li><li>Intune</li><li>MFA</li><li>Least privilege</li><li>Email security</li><li>Essential Eight</li></ul>
         </article>
         <article class="card">
           <span class="num">02</span>
           <div>
-            <div class="label">Web</div>
-            <h3>Websites</h3>
-            <p>Fast, clear sites on Wix, WordPress or hand-built code, with copy that says what you do and a page structure that gets enquiries.</p>
+            <div class="label">Devices</div>
+            <h3>Laptops and phones</h3>
+            <p>Advice on what to buy, then devices that arrive set up and ready to use with Windows Autopilot. When someone leaves, their device is locked and wiped.</p>
           </div>
-          <ul><li>Wix</li><li>WordPress</li><li>Static</li></ul>
+          <ul><li>Recommend</li><li>Autopilot</li><li>Wipe and offboard</li></ul>
         </article>
         <article class="card">
           <span class="num">03</span>
           <div>
-            <div class="label">Product</div>
-            <h3>App development</h3>
-            <p>Web and mobile apps for a specific job: bookings, rosters, payments, internal tools. Scoped small, shipped, then improved.</p>
+            <div class="label">Domains</div>
+            <h3>Domains, hosting and Cloudflare</h3>
+            <p>Buying and moving domains, sorting out DNS, and putting Cloudflare in front of your site for speed and protection. Whether you’re with GoDaddy, Crazy Domains or someone else.</p>
           </div>
-          <ul><li>Web apps</li><li>Mobile</li><li>Internal tools</li></ul>
+          <ul><li>Domains</li><li>Migration</li><li>Cloudflare</li><li>DNS</li></ul>
         </article>
         <article class="card">
           <span class="num">04</span>
           <div>
-            <div class="label">Automation</div>
-            <h3>AI agents and automation</h3>
-            <p>The weekly report, the copy-paste data entry, the follow-up email nobody sends. Handed to an agent or workflow, with a person checking what matters.</p>
+            <div class="label">Web</div>
+            <h3>Websites and online stores</h3>
+            <p>Sites on Wix, WordPress or Squarespace, plus Square for online stores, point of sale and bookings. Built so you can update them yourself.</p>
           </div>
-          <ul><li>AI agents</li><li>Workflows</li><li>Reporting</li></ul>
+          <ul><li>Wix</li><li>WordPress</li><li>Squarespace</li><li>Square</li></ul>
+        </article>
+        <article class="card">
+          <span class="num">05</span>
+          <div>
+            <div class="label">Automation</div>
+            <h3>Automation and AI agents</h3>
+            <p>The weekly report, the copy-paste data entry, the follow-up email nobody sends. Built in Power Automate, Copilot Studio or Claude, with a person checking what matters.</p>
+          </div>
+          <ul><li>Power Automate</li><li>Copilot Studio</li><li>AI agents</li><li>Reporting</li></ul>
+        </article>
+        <article class="card">
+          <span class="num">06</span>
+          <div>
+            <div class="label">Files</div>
+            <h3>SharePoint and Teams</h3>
+            <p>Shared files that people can actually find. Team sites, a sensible folder structure and permissions that match who should see what.</p>
+          </div>
+          <ul><li>SharePoint</li><li>Teams</li><li>Permissions</li></ul>
         </article>
       </div>
+      <p class="limits label">Not offered: printers, phone systems or 24/7 support. Larger networking jobs and cyber incident response go to trusted specialists.</p>
     </div>
   </section>
 
@@ -299,7 +319,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
         <div class="row"><span class="label">001</span><h3>Talk</h3><p>A free 30-minute call about what’s slowing you down and what a good result looks like. No obligation.</p></div>
         <div class="row"><span class="label">002</span><h3>Scope</h3><p>A written proposal with what’s included, what isn’t, the timeline and a fixed price. Nothing starts until you agree to it.</p></div>
         <div class="row"><span class="label">003</span><h3>Build</h3><p>Work happens in small, visible steps. You see progress early and can change direction.</p></div>
-        <div class="row"><span class="label">004</span><h3>Hand over</h3><p>Documentation, logins and training, plus ongoing support if you want it.</p></div>
+        <div class="row"><span class="label">004</span><h3>Report and hand over</h3><p>A short report in plain English: what was found, what was fixed and what to do next. Plus logins, documentation and ongoing support if you want it.</p></div>
       </div>
     </div>
   </section>
