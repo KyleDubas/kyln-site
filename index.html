@@ -128,6 +128,29 @@ h2 { font: 700 clamp(36px, 5vw, 48px)/1.05 var(--sans); letter-spacing: -.02em; 
 footer { border-top: 1px solid var(--line); }
 footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 28px; padding-bottom: 28px; }
 
+/* Free checklist */
+.e8 { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; margin-top: 20px; }
+.e8 h2 { margin-bottom: 20px; }
+
+.e8-lede { text-wrap: pretty; font-size: clamp(17px, 1.6vw, 19px); color: var(--muted); max-width: 44ch; margin: 0 0 28px; }
+.e8-points { list-style: none; padding: 0; margin: 0 0 36px; display: grid; gap: 12px; }
+.e8-points li { display: flex; gap: 12px; }
+.e8-points svg { flex: none; width: 20px; height: 20px; margin-top: 3px; }
+.e8 .ctas { align-items: center; gap: 16px 24px; }
+.e8-fine { margin: 24px 0 0; font-size: 14px; color: var(--muted); max-width: 52ch; }
+.e8-fine a { color: var(--accent-link); }
+.e8-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: clamp(22px, 2.4vw, 28px); }
+.e8-card .top { display: flex; justify-content: space-between; }
+.e8-card .top span:first-child { color: var(--accent-link); }
+.e8-card h3 { font: 700 clamp(20px, 2vw, 22px)/1.2 var(--sans); margin: 10px 0 16px; }
+.e8-item { display: flex; gap: 12px; padding: 13px 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.45; }
+.e8-item.off { color: var(--muted); }
+.e8-box { flex: none; width: 18px; height: 18px; margin-top: 1px; border: 1.5px solid var(--muted); border-radius: 4px; display: grid; place-items: center; }
+.e8-item:not(.off) .e8-box { background: var(--text); border-color: var(--text); }
+.e8-box svg { width: 12px; height: 12px; }
+.e8-tip { margin-top: 14px; background: var(--bg); border-radius: 8px; padding: 14px 16px; font-size: 14px; color: var(--muted); }
+.e8-tip .label { display: block; margin-bottom: 4px; }
+
 /* Laptop and tablet landscape (iPad landscape, small laptops) */
 @media (max-width: 1100px) {
   .rail { display: none; }
@@ -135,7 +158,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
 }
 /* Tablet portrait, open foldables, large phones landscape */
 @media (max-width: 900px) {
-  .hero .in, .head, .about { grid-template-columns: 1fr; }
+  .hero .in, .head, .about, .e8 { grid-template-columns: 1fr; }
   .head p { justify-self: start; }
   .arch { justify-self: start; max-width: 180px; order: -1; }
   .facts .in { grid-template-columns: repeat(2, 1fr); }
@@ -160,6 +183,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
   .ctas .pill { justify-content: center; }
   .contact .ctas { align-items: flex-start; }
   .contact .ctas .pill { align-self: stretch; }
+  .e8 .ctas { align-items: stretch; }
   header .in { height: 64px; }
   .label { letter-spacing: .1em; }
 }
@@ -210,7 +234,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
 </header>
 
 <div class="rail" aria-hidden="true">
-  <a href="#top" tabindex="-1" class="on"></a><a href="#services" tabindex="-1"></a><a href="#process" tabindex="-1"></a><a href="#work" tabindex="-1"></a><a href="#about" tabindex="-1"></a><a href="#contact" tabindex="-1"></a>
+  <a href="#top" tabindex="-1" class="on"></a><a href="#services" tabindex="-1"></a><a href="#process" tabindex="-1"></a><a href="#work" tabindex="-1"></a><a href="#checklist" tabindex="-1"></a><a href="#about" tabindex="-1"></a><a href="#contact" tabindex="-1"></a>
 </div>
 
 <main>
@@ -339,9 +363,40 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
     </div>
   </section>
 
+  <section class="sec" id="checklist">
+    <div class="in">
+      <div class="label">04 / Free checklist</div>
+      <div class="e8">
+        <div>
+          <h2>See where your business stands on the Essential Eight.</h2>
+          <p class="e8-lede">The Australian Government’s eight baseline protections against cyber attacks, written as a plain-English checklist. Set aside 20 minutes and you’ll know which gaps to close first.</p>
+          <ul class="e8-points">
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#3A1520"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="#FF5C84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>32 yes-or-no checks across all eight strategies</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#3A1520"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="#FF5C84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Where to find each setting in Microsoft 365 and Windows</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#3A1520"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="#FF5C84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A score page that tells you what to fix first</li>
+          </ul>
+          <div class="ctas">
+            <a class="pill primary" href="/downloads/kyln-essential-eight-checklist.pdf" download>Download the checklist ↓</a>
+            <span class="label">PDF · 7 pages · No sign-up</span>
+          </div>
+          <p class="e8-fine">Tick the boxes on screen or print it out. This is a self-check based on the ASD’s <a href="https://www.cyber.gov.au/essential-eight" target="_blank" rel="noopener">Essential Eight Maturity Model</a>, not a formal assessment.</p>
+        </div>
+        <div class="e8-card" aria-hidden="true">
+          <div class="top label"><span>03</span><span>2 of 4</span></div>
+          <h3>Multi-factor authentication</h3>
+          <div class="e8-item"><span class="e8-box"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.2 2.2L9.5 3.6" fill="none" stroke="#121214" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>All staff use MFA to sign in to email and Microsoft 365.</div>
+          <div class="e8-item"><span class="e8-box"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.2 2.2L9.5 3.6" fill="none" stroke="#121214" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>MFA is on for accounting, banking, payroll and your CRM.</div>
+          <div class="e8-item off"><span class="e8-box"></span>MFA is on for any service your customers log in to.</div>
+          <div class="e8-item off"><span class="e8-box"></span>Staff use an authenticator app or security key, not SMS.</div>
+          <div class="e8-tip"><span class="label">Where to look</span>In Microsoft 365, turn on Security defaults or Conditional Access.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="about">
     <div class="in">
-      <div class="label">04 / About</div>
+      <div class="label">05 / About</div>
       <div class="about" style="margin-top:20px">
         <h2>Hi, I’m Kyle.</h2>
         <div>
@@ -355,7 +410,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
 
   <section class="sec contact" id="contact">
     <div class="in">
-      <div class="label">05 / Contact</div>
+      <div class="label">06 / Contact</div>
       <h2>Book a free <span style="white-space:nowrap">30-minute</span> call.</h2>
       <p class="contact-lede">Send a couple of lines about what you need and I’ll suggest a time. No obligation, and you’ll come away with a clear next step either way.</p>
       <div class="ctas">
