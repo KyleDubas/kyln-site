@@ -3,18 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kyln · Tech studio, Brisbane</title>
-<meta name="description" content="Kyln is a Brisbane tech studio for small businesses: Microsoft 365 and security, devices, domains and Cloudflare, websites and online stores, and automation.">
+<title>IT support and Microsoft 365 for small business, Brisbane · Kyln</title>
+<meta name="description" content="IT support for Brisbane small businesses, based in Nundah. Microsoft 365 and security, Essential Eight reviews, devices, domains, websites and automation.">
+<link rel="canonical" href="https://kyln.com.au/">
 <meta name="theme-color" content="#121214">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta property="og:title" content="Kyln · Tech studio, Brisbane">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kyln">
+<meta property="og:locale" content="en_AU">
+<meta property="og:url" content="https://kyln.com.au/">
+<meta property="og:title" content="IT support and Microsoft 365 for small business, Brisbane · Kyln">
 <meta property="og:description" content="Microsoft 365 and security, devices, domains, websites and automation for Brisbane small businesses.">
 <meta property="og:image" content="https://kyln.com.au/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Outfit:wght@400;700&display=swap">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://kyln.com.au/#business",
+   "name": "Kyln",
+   "url": "https://kyln.com.au/",
+   "description": "IT support for Brisbane small businesses: Microsoft 365 and security, Essential Eight reviews, devices, domains and Cloudflare, websites and automation.",
+   "logo": "https://kyln.com.au/apple-touch-icon.png",
+   "image": "https://kyln.com.au/og.png",
+   "email": "kyle@kyln.com.au",
+   "telephone": "+61 415 087 256",
+   "taxID": "22 144 547 728",
+   "founder": {
+    "@type": "Person",
+    "name": "Kyle"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nundah",
+    "addressRegion": "QLD",
+    "postalCode": "4012",
+    "addressCountry": "AU"
+   },
+   "areaServed": {
+    "@type": "City",
+    "name": "Brisbane"
+   },
+   "sameAs": [
+    "https://instagram.com/kyln.com.au"
+   ],
+   "knowsAbout": [
+    "Microsoft 365",
+    "Microsoft Intune",
+    "Essential Eight",
+    "Multi-factor authentication",
+    "Cloudflare",
+    "SharePoint",
+    "Power Automate",
+    "Wix",
+    "WordPress",
+    "Squarespace"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Microsoft 365 and security"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Laptops and phones"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Domains, hosting and Cloudflare"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Websites and online stores"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Automation and AI agents"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "SharePoint and Teams"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://kyln.com.au/#website",
+   "url": "https://kyln.com.au/",
+   "name": "Kyln",
+   "inLanguage": "en-AU",
+   "publisher": {
+    "@id": "https://kyln.com.au/#business"
+   }
+  }
+ ]
+}
+</script>
 <style>
 :root {
   --bg: #121214; --surface: #1C1C1F; --line: #2E2E33;
@@ -422,6 +534,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
         <a class="mail" href="mailto:kyle@kyln.com.au">kyle@kyln.com.au</a>
       </div>
       <div class="meta">
+        <a class="label" href="tel:+61415087256">Phone · 0415 087 256</a>
         <a class="label" href="https://instagram.com/kyln.com.au">Instagram · @kyln.com.au</a>
         <span class="label">Nundah, Brisbane QLD</span>
       </div>
@@ -431,25 +544,11 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
 
 <footer>
   <div class="in">
-    <span class="label">© 2026 Kyln</span>
+    <span class="label">© 2026 Kyln · ABN 22 144 547 728</span>
     <span class="label">kyln.com.au</span>
   </div>
 </footer>
 
-<script>
-/* Dot rail tracks the section in view. */
-(function () {
-  const dots = [...document.querySelectorAll(".rail a")];
-  const map = new Map(dots.map(d => [d.getAttribute("href").slice(1), d]));
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      dots.forEach(d => d.classList.remove("on"));
-      const d = map.get(e.target.id); if (d) d.classList.add("on");
-    });
-  }, { rootMargin: "-45% 0px -50% 0px" });
-  map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
-})();
-</script>
+<script src="/js/site.js" defer></script>
 </body>
 </html>

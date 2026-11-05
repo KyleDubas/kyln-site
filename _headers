@@ -1,0 +1,19 @@
+# Keep the test site (kyln-site.pages.dev and preview builds) out of search results.
+https://kyln-site.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.kyln-site.pages.dev/*
+  X-Robots-Tag: noindex
+
+# Security headers for every page.
+# The Content-Security-Policy only lets the browser run scripts from this site, which blocks
+# injected or third-party code. If you add a new outside service (analytics, a form, an embed),
+# add its domain to the matching line below or the browser will block it.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
