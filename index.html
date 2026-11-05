@@ -221,6 +221,17 @@ h2 { font: 700 clamp(36px, 5vw, 48px)/1.05 var(--sans); letter-spacing: -.02em; 
 .row h3 { font: 700 clamp(22px, 2.4vw, 28px)/1.15 var(--sans); margin: 0; }
 .row p { margin: 0; color: var(--muted); }
 
+/* Featured work */
+.work-feat { display: grid; grid-template-columns: 1.5fr 1fr; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: clamp(40px, 6vw, 64px); }
+.work-img { display: flex; align-items: center; border-right: 1px solid var(--line); }
+.work-img img { display: block; width: 100%; height: auto; }
+.work-body { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(22px, 3vw, 40px); }
+.work-body h3 { font: 700 clamp(24px, 2.4vw, 28px)/1.15 var(--sans); margin: 14px 0 12px; letter-spacing: -.01em; }
+.work-body p { margin: 0; color: var(--muted); }
+.work-body ul { list-style: none; padding: 0; margin: 24px 0 32px; display: flex; flex-wrap: wrap; gap: 8px; }
+.work-body li { font: 400 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.work-body .pill { margin-top: auto; }
+
 /* About */
 .about { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(24px, 5vw, 64px); }
 .about p { font-size: clamp(17px, 1.6vw, 19px); margin: 0 0 20px; max-width: 52ch; }
@@ -272,7 +283,8 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
 }
 /* Tablet portrait, open foldables, large phones landscape */
 @media (max-width: 900px) {
-  .hero .in, .head, .about, .e8 { grid-template-columns: 1fr; }
+  .hero .in, .head, .about, .e8, .work-feat { grid-template-columns: 1fr; }
+  .work-img { border-right: 0; border-bottom: 1px solid var(--line); }
   .head p { justify-self: start; }
   .arch { justify-self: start; max-width: 180px; order: -1; }
   .facts .in { grid-template-columns: repeat(2, 1fr); }
@@ -468,11 +480,25 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
       <div class="label">03 / Recent work</div>
       <div class="head">
         <h2>What it looks<br>like in practice.</h2>
-        <p>Client names kept private. Happy to talk through any of these on a call.</p>
+        <p>Business client names are kept private. Happy to talk through any of these on a call.</p>
       </div>
+      <article class="work-feat">
+        <a class="work-img" href="https://troopershockeyclub.wordpress.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source srcset="/img/work/troopers.webp" type="image/webp">
+            <img src="/img/work/troopers.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="">
+          </picture>
+        </a>
+        <div class="work-body">
+          <div class="label">Web · WordPress</div>
+          <h3>Troopers Hockey Club</h3>
+          <p>A website for my own club, a Brisbane ice and inline hockey club with 60+ players across Divisions 2 to 4. Volunteers update it themselves.</p>
+          <ul><li>Jersey shop</li><li>Number register</li><li>Ladders and fixtures</li><li>Sponsors</li><li>Join form</li></ul>
+          <a class="pill ghost" href="https://troopershockeyclub.wordpress.com/" target="_blank" rel="noopener">Visit the site ↗</a>
+        </div>
+      </article>
       <div class="rows">
         <div class="row"><span class="label">Reporting</span><h3>Monthly marketing reports</h3><p>Email campaign results pulled together and explained in plain English each month for a Brisbane business, so the owner sees what worked without logging in to anything.</p></div>
-        <div class="row"><span class="label">Web</span><h3>Community club website</h3><p>A site for a local sports club that volunteers can update themselves, including fixtures, contacts and a register of player numbers.</p></div>
         <div class="row"><span class="label">IT</span><h3>Microsoft 365 clean-ups</h3><p>Unused licences removed, shared mailboxes sorted out, multi-factor sign-in turned on for everyone.</p></div>
       </div>
     </div>
