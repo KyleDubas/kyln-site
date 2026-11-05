@@ -139,7 +139,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
 .e8 .ctas { align-items: center; gap: 16px 24px; }
 .e8-fine { margin: 24px 0 0; font-size: 14px; color: var(--muted); max-width: 52ch; }
 .e8-fine a { color: var(--accent-link); }
-.e8-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: clamp(22px, 2.4vw, 28px); }
+.e8-card { display: block; text-decoration: none; transition: border-color .2s; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: clamp(22px, 2.4vw, 28px); }
 .e8-card .top { display: flex; justify-content: space-between; }
 .e8-card .top span:first-child { color: var(--accent-link); }
 .e8-card h3 { font: 700 clamp(20px, 2vw, 22px)/1.2 var(--sans); margin: 10px 0 16px; }
@@ -149,6 +149,8 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
 .e8-item:not(.off) .e8-box { background: var(--text); border-color: var(--text); }
 .e8-box svg { width: 12px; height: 12px; }
 .e8-tip { margin-top: 14px; background: var(--bg); border-radius: 8px; padding: 14px 16px; font-size: 14px; color: var(--muted); }
+.e8-card:hover { border-color: var(--accent); }
+.e8-go { display: block; margin-top: 18px; color: var(--accent-link); }
 .e8-tip .label { display: block; margin-bottom: 4px; }
 
 /* Laptop and tablet landscape (iPad landscape, small laptops) */
@@ -184,6 +186,7 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
   .contact .ctas { align-items: flex-start; }
   .contact .ctas .pill { align-self: stretch; }
   .e8 .ctas { align-items: stretch; }
+  .e8 .ctas .pill { justify-content: center; }
   header .in { height: 64px; }
   .label { letter-spacing: .1em; }
 }
@@ -369,19 +372,19 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
       <div class="e8">
         <div>
           <h2>See where your business stands on the Essential Eight.</h2>
-          <p class="e8-lede">The Australian Government’s eight baseline protections against cyber attacks, written as a plain-English checklist. Set aside 20 minutes and you’ll know which gaps to close first.</p>
+          <p class="e8-lede">The Australian Government’s eight baseline protections against cyber attacks, written as a plain-English checklist. Set aside 10 minutes and you’ll know which gaps to close first.</p>
           <ul class="e8-points">
             <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#3A1520"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="#FF5C84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>32 yes-or-no checks across all eight strategies</li>
             <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#3A1520"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="#FF5C84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Where to find each setting in Microsoft 365 and Windows</li>
             <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#3A1520"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="#FF5C84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A score page that tells you what to fix first</li>
           </ul>
           <div class="ctas">
-            <a class="pill primary" href="/downloads/kyln-essential-eight-checklist.pdf" download>Download the checklist ↓</a>
-            <span class="label">PDF · 7 pages · No sign-up</span>
+            <a class="pill primary" href="/essential-eight/">Start the self-check →</a>
+            <a class="pill ghost" href="/downloads/kyln-essential-eight-checklist.pdf" download>Download the PDF ↓</a>
           </div>
-          <p class="e8-fine">Tick the boxes on screen or print it out. This is a self-check based on the ASD’s <a href="https://www.cyber.gov.au/essential-eight" target="_blank" rel="noopener">Essential Eight Maturity Model</a>, not a formal assessment.</p>
+          <p class="e8-fine">Answer online in about 10 minutes, or print the PDF. No sign-up, and your answers stay in your browser. This is a self-check based on the ASD’s <a href="https://www.cyber.gov.au/essential-eight" target="_blank" rel="noopener">Essential Eight Maturity Model</a>, not a formal assessment.</p>
         </div>
-        <div class="e8-card" aria-hidden="true">
+        <a class="e8-card" href="/essential-eight/" aria-label="Start the Essential Eight self-check">
           <div class="top label"><span>03</span><span>2 of 4</span></div>
           <h3>Multi-factor authentication</h3>
           <div class="e8-item"><span class="e8-box"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.2 2.2L9.5 3.6" fill="none" stroke="#121214" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>All staff use MFA to sign in to email and Microsoft 365.</div>
@@ -389,7 +392,8 @@ footer .in { padding-bottom: max(28px, env(safe-area-inset-bottom)) !important; 
           <div class="e8-item off"><span class="e8-box"></span>MFA is on for any service your customers log in to.</div>
           <div class="e8-item off"><span class="e8-box"></span>Staff use an authenticator app or security key, not SMS.</div>
           <div class="e8-tip"><span class="label">Where to look</span>In Microsoft 365, turn on Security defaults or Conditional Access.</div>
-        </div>
+          <span class="e8-go label">Try the self-check →</span>
+        </a>
       </div>
     </div>
   </section>
