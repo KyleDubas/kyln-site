@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Essential Eight self-check for small business · Kyln</title>
+<meta name="description" content="A free, plain-English Essential Eight self-check. Answer 32 quick questions and get a prioritised list of fixes for your business. No sign-up, and your answers never leave your browser.">
+<meta name="theme-color" content="#121214">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="Essential Eight self-check for small business · Kyln">
+<meta property="og:description" content="32 quick questions, a prioritised list of fixes. No sign-up.">
+<meta property="og:image" content="https://kyln.com.au/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Outfit:wght@400;700&display=swap">
+<style>
+:root {
+  --bg: #121214; --surface: #1C1C1F; --line: #2E2E33;
+  --text: #EDEBE8; --muted: #9A9893;
+  --accent: #FF3B6B; --accent-soft: #3A1520; --accent-link: #FF5C84;
+  --sans: "Outfit", system-ui, sans-serif; --mono: "Geist Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; color: var(--text); background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M64 0H0V64' fill='none' stroke='%23EDEBE8' stroke-opacity='.035'/%3E%3C/svg%3E");
+  font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent-link); outline-offset: 3px; border-radius: 4px; }
+.in { --gutter: clamp(20px, 5vw, 80px); max-width: 880px; margin: 0 auto; padding-left: max(var(--gutter), env(safe-area-inset-left)); padding-right: max(var(--gutter), env(safe-area-inset-right)); }
+header .in, footer .in { max-width: 1240px; }
+.label { font: 400 12px/1.5 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+header .in { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { display: block; width: 92px; }
+.logo svg { display: block; width: 100%; height: auto; }
+
+.pill { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 0 26px; border-radius: 999px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; cursor: pointer; border: 0; transition: background .2s, color .2s, border-color .2s; }
+.pill.primary { background: var(--accent); color: var(--bg); }
+.pill.primary:hover { background: var(--text); }
+.pill.ghost { background: transparent; border: 1px solid var(--line); color: var(--text); }
+.pill.ghost:hover { border-color: var(--text); }
+header .pill { min-height: 44px; padding: 0 20px; border: 1px solid var(--line); color: var(--text); }
+header .pill:hover { border-color: var(--text); }
+
+main { padding: clamp(40px, 7vw, 96px) 0 clamp(64px, 9vw, 128px); min-height: 70vh; }
+h1 { font: 700 clamp(36px, 5.5vw, 56px)/1.05 var(--sans); letter-spacing: -.02em; margin: 16px 0 20px; outline: none; }
+h2 { font: 700 clamp(24px, 3vw, 30px)/1.15 var(--sans); letter-spacing: -.01em; margin: 56px 0 8px; }
+.lede { font-size: clamp(17px, 1.6vw, 19px); color: var(--muted); max-width: 52ch; margin: 0 0 32px; text-wrap: pretty; }
+.ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.facts { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0 0 40px; }
+.fine { margin: 40px 0 0; font-size: 14px; color: var(--muted); max-width: 64ch; }
+.fine a { color: var(--accent-link); }
+
+/* Progress */
+.progress { height: 4px; background: var(--line); border-radius: 99px; overflow: hidden; margin-bottom: 28px; }
+.progress div { height: 100%; background: var(--accent); border-radius: 99px; transition: width .3s ease; }
+.steptop { display: flex; justify-content: space-between; gap: 16px; }
+.why { color: var(--muted); font-size: 17px; max-width: 60ch; margin: 0 0 28px; }
+
+/* Questions */
+.q { border: 0; margin: 0; padding: 20px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 14px 28px; align-items: center; }
+.q:last-of-type { border-bottom: 1px solid var(--line); }
+.q legend { float: left; padding: 0; font-size: 17px; line-height: 1.5; max-width: 52ch; }
+.opts { display: flex; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px; }
+.opts input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.opts label { font: 500 12px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding: 11px 14px; border-radius: 999px; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s; }
+.opts label:hover { color: var(--text); }
+.opts input:checked + label { background: var(--text); color: var(--bg); }
+.opts input[value="no"]:checked + label { background: var(--accent); color: var(--bg); }
+.opts input:focus-visible + label { outline: 2px solid var(--accent-link); outline-offset: 2px; }
+.tip { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; color: var(--muted); font-size: 15px; }
+.tip .label { display: block; margin-bottom: 6px; }
+.stepnav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
+.hint { margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+
+/* Results */
+.scores { border-top: 1px solid var(--line); margin-top: 8px; }
+.score { display: grid; grid-template-columns: 36px 1fr 160px 64px; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.score .n { color: var(--accent-link); }
+.bar { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.bar div { height: 100%; background: var(--text); border-radius: 99px; }
+.score .t { text-align: right; }
+.fixes { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; counter-reset: fix; }
+.fix { counter-increment: fix; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px 20px 64px; position: relative; }
+.fix::before { content: counter(fix, decimal-leading-zero); position: absolute; left: 22px; top: 23px; font: 500 12px/1 var(--mono); color: var(--accent-link); }
+.fix .label { display: block; margin-bottom: 6px; }
+.fix p { margin: 0; font-size: 17px; line-height: 1.5; }
+.unsure { list-style: none; padding: 0; margin: 20px 0 0; border-top: 1px solid var(--line); }
+.unsure li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.unsure .label { display: block; margin-bottom: 2px; }
+.sub { color: var(--muted); margin: 0; max-width: 60ch; }
+.done { margin-top: 56px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: clamp(24px, 3vw, 32px); }
+.done h2 { margin: 0 0 8px; }
+.done p { color: var(--muted); margin: 0 0 24px; max-width: 54ch; }
+
+footer { border-top: 1px solid var(--line); }
+footer .in { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 28px; padding-bottom: max(28px, env(safe-area-inset-bottom)); }
+
+@media (max-width: 680px) {
+  .q { grid-template-columns: 1fr; }
+  .opts { justify-self: start; }
+  .score { grid-template-columns: 30px 1fr 56px; }
+  .score .bar { grid-column: 2 / 4; grid-row: 2; }
+}
+@media (max-width: 480px) {
+  header .in { height: 64px; }
+  .ctas { flex-direction: column; align-items: stretch; }
+  .stepnav .pill { padding: 0 18px; }
+  .opts { width: 100%; }
+  .opts label { flex: 1; text-align: center; padding: 11px 6px; }
+  .fix { padding-left: 52px; }
+  .fix::before { left: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+@media print {
+  @page { margin: 16mm; }
+  body { background: #fff; color: #121214; font-size: 11pt; }
+  header, footer, .actions, .noprint { display: none !important; }
+  main { padding: 0; min-height: 0; }
+  .lede, .sub, .fine, .label, .done p { color: #5E5C59; }
+  .fix, .done { background: #fff; border-color: #D6D3CE; break-inside: avoid; }
+  .fix::before, .score .n { color: #C8103F; }
+  .bar, .bar div, .fix::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .bar { background: #D6D3CE; } .bar div { background: #121214; }
+  .scores, .score, .unsure, .unsure li { border-color: #D6D3CE; }
+  .done .ctas { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="in">
+    <a class="logo" href="/" aria-label="Kyln home">
+      <svg viewBox="54 34 1722 931" aria-hidden="true"><path d="M365 760 195 508 364 274H535L331 537L336 474L545 760ZM54 760V34H207V760Z M719 762 519 274H684L811 661H750L880 274H1045L837 762ZM594 965 740 650 837 762 751 965Z M1072 760V34H1225V760Z" fill="#EDEBE8"/><path d="M1302,760 V507.0 A237.0,237.0 0 0 1 1776,507.0 V760 Z M1455,760 V484.0 A84.0,84.0 0 0 1 1623,484.0 V760 Z" fill="#EDEBE8" fill-rule="evenodd"/><rect x="1492.0" y="611.6" width="94.1" height="64.3" fill="#FF3B6B"/></svg>
+    </a>
+    <a class="pill" href="/#contact">Book a call</a>
+  </div>
+</header>
+
+<main>
+  <div class="in" id="app" aria-live="polite">
+    <noscript><p class="lede">This self-check needs JavaScript. You can <a href="/downloads/kyln-essential-eight-checklist.pdf" download>download the PDF version</a> instead.</p></noscript>
+  </div>
+</main>
+
+<footer>
+  <div class="in">
+    <span class="label">© 2026 Kyln</span>
+    <a class="label" href="/">kyln.com.au</a>
+  </div>
+</footer>
+
+<script>
+const E8 = [{"name": "Patch applications", "why": "Attackers go after known flaws in common software. Most of those flaws already have a fix. Your job is to install it before someone uses it against you.", "checks": ["You keep an up-to-date list of the software and devices your business uses, and you review it at least every two weeks.", "Web browsers, Microsoft Office, email, PDF readers and security software install updates within two weeks of release.", "Anything reachable from the internet (website, firewall, VPN, remote access) gets security updates within two weeks, or within 48 hours if attackers are already exploiting the flaw.", "You've removed any software the vendor no longer supports."], "tip": "Microsoft Intune or Windows Update for Business can push and report on updates. Defender Vulnerability Management lists what's missing.", "fixes": ["Keep a simple list of every app and device you use, and review it each fortnight. Intune's discovered apps report builds most of it for you.", "Turn on automatic updates for browsers, Microsoft 365 Apps, PDF readers and security software, then check each fortnight that they've applied.", "List everything reachable from the internet (website, firewall, VPN, remote access) and patch it within two weeks, or 48 hours when attackers are already using the flaw. Sign up to your vendors' security alerts so you hear about those.", "Uninstall software the vendor no longer supports, or move to a supported version."]}, {"name": "Patch operating systems", "why": "Windows, macOS and the firmware on your network gear need the same treatment. An old operating system is one of the easiest ways in.", "checks": ["Every computer and server installs operating system security updates within one month.", "Internet-facing devices get operating system updates within two weeks, or within 48 hours if the flaw is already being exploited.", "You check for missing operating system updates at least every two weeks.", "No computer runs an operating system the vendor has stopped supporting, such as Windows 10 without paid extended updates."], "tip": "In Windows, open Settings, then Windows Update, then Update history. In Intune, check the Windows update reports.", "fixes": ["Set Windows and macOS to install security updates automatically, and bring every computer and server to within a month of current.", "Patch the operating system on internet-facing devices such as firewalls, routers and servers within two weeks, or 48 hours for flaws already being exploited.", "Check for missing updates every fortnight. Intune's Windows update reports or Defender Vulnerability Management show it in one place.", "Upgrade or replace computers on unsupported operating systems. Windows 10 support ended in October 2025, so those machines need Windows 11 or paid Extended Security Updates."]}, {"name": "Multi-factor authentication", "why": "A stolen password on its own shouldn't be enough to get into your email or bank. MFA asks for a second proof, such as a code from your phone.", "checks": ["All staff use MFA to sign in to email and Microsoft 365 or Google Workspace.", "MFA is on for other online services that hold business data, such as accounting, banking, payroll and your CRM.", "MFA is on for any service your customers log in to that holds their data.", "Staff use an authenticator app or security key where possible, rather than SMS codes."], "tip": "In Microsoft 365, turn on Security defaults, or Conditional Access if you have Business Premium. Check the MFA settings inside Xero, MYOB and your bank.", "fixes": ["Turn on MFA for every Microsoft 365 or Google Workspace account. In Microsoft 365, Security defaults does this at no extra cost.", "Turn on MFA for your accounting, banking, payroll and CRM logins. You'll usually find it in each account's security settings.", "If customers log in to anything of yours that holds their data, require MFA on it or at least offer it.", "Move staff from SMS codes to Microsoft Authenticator or a security key. Attackers can intercept SMS codes or move a phone number to another SIM."]}, {"name": "Restrict administrative privileges", "why": "Admin accounts can change anything. If an attacker gets one, they own the network. Keep these accounts few and use them only for admin work.", "checks": ["Someone checks and approves each request for admin access before it's granted.", "People who do admin work have a separate admin account, and use their normal account for everything else.", "Admin accounts can't browse the web or open email.", "Normal staff accounts can't sign in to admin tools or systems."], "tip": "In the Microsoft 365 admin centre, go to Roles and see who holds Global Administrator. Aim for two named people with separate admin logins.", "fixes": ["Make admin access something a person requests and someone else approves, with the reason written down.", "Give anyone who does admin work a separate admin account, such as admin.jane@yourbusiness.com.au, and keep their normal account for daily work.", "Block admin accounts from email and web browsing. In Microsoft 365, leave them without a mailbox licence and use them only in admin portals.", "Stop normal staff accounts signing in to admin portals and servers. Role assignments and Conditional Access can enforce this."]}, {"name": "Application control", "why": "Most malware arrives as a file that someone runs from their Downloads folder. Application control lets only approved programs run from the places users can save files.", "checks": ["On staff computers, only approved programs can run from user folders (Downloads, Desktop, Documents) and temporary folders.", "The rules cover programs, scripts, installers and other files that can run code, not only .exe files.", "Someone in the business decides which programs are approved."], "tip": "Microsoft Defender Application Control and AppLocker both work through Intune. Test in audit mode first so you don't block something staff need.", "fixes": ["Turn on application control for user folders and temporary folders, so unknown programs in Downloads or on the Desktop can't run.", "Extend your rules past .exe files to scripts, installers and libraries, such as .ps1, .bat, .msi and .dll files.", "Name one person who approves new software, and keep the approved list somewhere staff can see it."]}, {"name": "Configure Microsoft Office macros", "why": "Macros are small programs inside Word and Excel files. Attackers hide malware in them and email the file. Most staff never need macros.", "checks": ["Macros are turned off for staff who don't need them for their work.", "Macros in files downloaded from the internet or received by email are blocked.", "Your antivirus scans macros.", "Staff can't change macro security settings themselves."], "tip": "Set these with Intune or Group Policy under the Microsoft 365 Apps security settings. Office now blocks internet macros by default, so confirm nobody has switched it back on.", "fixes": ["Turn off macros for everyone who doesn't need them for their work. Most staff don't.", "Block macros in files from the internet, including email attachments. Office does this by default, so check no policy has switched it back on.", "Make sure your antivirus scans Office macros. Microsoft Defender does this through the antimalware scan interface (AMSI).", "Lock macro settings with Intune or Group Policy so staff can't change them."]}, {"name": "User application hardening", "why": "Web browsers are your staff's front door to the internet. A few settings close off common tricks, such as malicious ads.", "checks": ["Web browsers block advertisements from websites.", "Web browsers don't run Java content from the internet.", "Internet Explorer 11 is turned off or removed.", "Staff can't change web browser security settings."], "tip": "Manage Edge and Chrome settings centrally through Intune or Group Policy. uBlock Origin Lite or your security tool's ad filtering covers the ad blocking.", "fixes": ["Block web ads in every browser with a managed ad blocker or your security tool's web filtering.", "Stop browsers running Java from the internet. Current Edge and Chrome can't, so check nothing older on your computers still does.", "Turn off or remove Internet Explorer 11 on every computer.", "Manage browser security settings centrally through Intune or Group Policy so staff can't change them."]}, {"name": "Regular backups", "why": "If ransomware hits or a laptop dies, backups decide whether you lose a day or the business. A backup only counts once you've restored from it.", "checks": ["You back up important data, software and settings as often as the business needs.", "Backups are taken together, so you can restore everything to the same point in time.", "Backups are stored somewhere secure and separate from your main systems, such as an offsite or cloud copy.", "You've tested restoring from backup as part of a practice run of a disaster.", "Normal staff accounts can't see other people's backups, or change or delete any backup."], "tip": "Microsoft 365 keeps deleted items for a limited time, but that isn't a full backup. A third-party Microsoft 365 backup tool fills the gap.", "fixes": ["Decide what you can't afford to lose (files, email, accounting data, settings) and back it up as often as you'd need to restore it.", "Schedule backups so related systems are captured together, and you can roll everything back to the same point in time.", "Keep a copy separate from your main systems, such as a cloud backup service or an offsite drive, where ransomware on your network can't reach it.", "Run a test restore. Pick a file, a mailbox and a system, restore them, and time how long it takes.", "Lock down backup access so staff can't change or delete backups, or see other people's."]}];
+const ORDER = [2, 7, 3, 0, 1, 5, 6, 4];
+(function () {
+  const app = document.getElementById("app");
+  const total = E8.reduce((n, s) => n + s.checks.length, 0);
+  const answers = E8.map(s => s.checks.map(() => null));
+  let step = -1;
+  const pad = n => String(n).padStart(2, "0");
+  const esc = t => t.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const PDF = "/downloads/kyln-essential-eight-checklist.pdf";
+  const FINE = 'This is a self-check to help you spot gaps. It isn’t a formal Essential Eight maturity assessment, audit or certification, and answering yes to everything doesn’t mean your business is secure. Questions are simplified from the ASD’s <a href="https://www.cyber.gov.au/essential-eight" target="_blank" rel="noopener">Essential Eight Maturity Model</a> (November 2023, © Commonwealth of Australia, CC BY 4.0). ASD doesn’t endorse Kyln.';
+
+  function go(n) {
+    step = n;
+    if (n === -1) intro(); else if (n < E8.length) question(n); else results();
+    window.scrollTo({ top: 0 });
+    const h = app.querySelector("h1"); if (h && n !== -1) h.focus({ preventScroll: true });
+  }
+
+  function intro() {
+    app.innerHTML = `
+      <div class="label">Free self-check · Maturity Level One</div>
+      <h1 tabindex="-1">Essential Eight self-check</h1>
+      <p class="lede">Answer ${total} yes-or-no questions about how your business handles updates, sign-ins, admin access and backups. At the end you get a list of fixes, with the quickest wins first.</p>
+      <div class="facts">
+        <span class="label">8 sections</span><span class="label">About 10 minutes</span><span class="label">No sign-up</span><span class="label">Answers stay in your browser</span>
+      </div>
+      <div class="ctas">
+        <button class="pill primary" type="button" id="start">Start the check →</button>
+        <a class="pill ghost" href="${PDF}" download>Download the PDF instead ↓</a>
+      </div>
+      <p class="fine">Nothing you enter is sent anywhere or saved. Close the tab and it’s gone. ${FINE}</p>`;
+    document.getElementById("start").onclick = () => go(0);
+  }
+
+  function question(i) {
+    const s = E8[i];
+    const opts = (j) => [["yes", "Yes"], ["no", "No"], ["unsure", "Not sure"]].map(([v, l]) => {
+      const id = `q${i}-${j}-${v}`;
+      return `<input type="radio" name="q${i}-${j}" id="${id}" value="${v}" ${answers[i][j] === v ? "checked" : ""}><label for="${id}">${l}</label>`;
+    }).join("");
+    app.innerHTML = `
+      <div class="progress" aria-hidden="true"><div style="width:${(i / E8.length) * 100}%"></div></div>
+      <div class="steptop label"><span>Section ${pad(i + 1)} of ${pad(E8.length)}</span><span>${s.checks.length} questions</span></div>
+      <h1 tabindex="-1">${esc(s.name)}</h1>
+      <p class="why">${esc(s.why)}</p>
+      <form id="f">
+        ${s.checks.map((c, j) => `<fieldset class="q"><legend>${esc(c)}</legend><div class="opts">${opts(j)}</div></fieldset>`).join("")}
+      </form>
+      <div class="tip"><span class="label">Where to look</span>${esc(s.tip)}</div>
+      <div class="stepnav">
+        <button class="pill ghost" type="button" id="back">← Back</button>
+        <button class="pill primary" type="button" id="next">${i === E8.length - 1 ? "See my results →" : "Next section →"}</button>
+      </div>
+      <p class="hint">Skip anything you can’t answer. It counts as Not sure.</p>`;
+    document.getElementById("f").addEventListener("change", e => {
+      const [, a, b] = e.target.name.match(/q(\d+)-(\d+)/); answers[+a][+b] = e.target.value;
+    });
+    document.getElementById("back").onclick = () => go(i - 1);
+    document.getElementById("next").onclick = () => go(i + 1);
+  }
+
+  function results() {
+    const yes = answers.flat().filter(a => a === "yes").length;
+    const fixes = [], unsure = [];
+    ORDER.forEach(i => E8[i].checks.forEach((c, j) => {
+      const a = answers[i][j];
+      if (a === "no") fixes.push({ s: E8[i].name, t: E8[i].fixes[j] });
+      else if (a !== "yes") unsure.push({ s: E8[i].name, t: c });
+    }));
+    let summary;
+    if (!fixes.length && !unsure.length) summary = "Every item is in place. You look close to Maturity Level One. An independent assessment would confirm it and show what Level Two would take.";
+    else if (!fixes.length) summary = `No clear gaps, but ${unsure.length} ${unsure.length === 1 ? "item needs" : "items need"} checking. Confirm those before you call it done.`;
+    else summary = `Here ${fixes.length === 1 ? "is 1 fix" : `are ${fixes.length} fixes`}, with the quickest, highest-impact ones first. ASD recommends getting all eight sections in place before aiming higher.`;
+
+    const scores = E8.map((s, i) => {
+      const y = answers[i].filter(a => a === "yes").length, n = s.checks.length;
+      return `<div class="score"><span class="n label">${pad(i + 1)}</span><span>${esc(s.name)}</span><div class="bar" aria-hidden="true"><div style="width:${(y / n) * 100}%"></div></div><span class="t label">${y} of ${n}</span></div>`;
+    }).join("");
+
+    app.innerHTML = `
+      <div class="progress noprint" aria-hidden="true"><div style="width:100%"></div></div>
+      <div class="label">Your results · Essential Eight self-check</div>
+      <h1 tabindex="-1">You have ${yes} of ${total} in place.</h1>
+      <p class="lede">${summary}</p>
+      <div class="ctas actions">
+        <button class="pill primary" type="button" id="print">Print or save as PDF</button>
+        <button class="pill ghost" type="button" id="again">Start again</button>
+      </div>
+      <h2>By section</h2>
+      <div class="scores">${scores}</div>
+      ${fixes.length ? `<h2>Recommended fixes</h2><p class="sub">Work down the list. Each one closes a gap you answered No to.</p>
+        <ol class="fixes">${fixes.map(f => `<li class="fix"><span class="label">${esc(f.s)}</span><p>${esc(f.t)}</p></li>`).join("")}</ol>` : ""}
+      ${unsure.length ? `<h2>Worth checking</h2><p class="sub">You weren’t sure about these. Ask whoever looks after your IT, or check the setting yourself.</p>
+        <ul class="unsure">${unsure.map(u => `<li><span class="label">${esc(u.s)}</span>${esc(u.t)}</li>`).join("")}</ul>` : ""}
+      <div class="done">
+        <h2>Want a hand with these?</h2>
+        <p>Book a free 30-minute call. Send a couple of lines about your setup and you’ll come away with a clear next step, whether you work with Kyln or not.</p>
+        <div class="ctas">
+          <a class="pill primary" href="mailto:kyle@kyln.com.au?subject=Essential%20Eight%20self-check">Book a call →</a>
+          <a class="pill ghost" href="${PDF}" download>Download the PDF ↓</a>
+        </div>
+      </div>
+      <p class="fine">${FINE} Results generated ${new Date().toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric" })}.</p>`;
+    document.getElementById("print").onclick = () => window.print();
+    document.getElementById("again").onclick = () => { answers.forEach(r => r.fill(null)); go(-1); };
+  }
+
+  go(-1);
+})();
+</script>
+</body>
+</html>
