@@ -86,9 +86,10 @@ const ORDER = [2, 7, 3, 0, 1, 5, 6, 4];
         <ul class="unsure">${unsure.map(u => `<li><span class="label">${esc(u.s)}</span>${esc(u.t)}</li>`).join("")}</ul>` : ""}
       <div class="done">
         <h2>Want a hand with these?</h2>
-        <p>Book a free 30-minute call. Send a couple of lines about your setup and you’ll come away with a clear next step, whether you work with Kyln or not.</p>
+        <p>Book a free 30-minute call, or email a couple of lines about your setup to kyle@kyln.com.au. You’ll come away with a clear next step, whether you work with Kyln or not.</p>
         <div class="ctas">
-          <a class="pill primary" href="mailto:kyle@kyln.com.au?subject=Essential%20Eight%20self-check">Book a call →</a>
+          <a class="pill primary" href="tel:+61415087256">Book a call →</a>
+          <a class="pill ghost" href="mailto:kyle@kyln.com.au?subject=Essential%20Eight%20self-check">Email Kyle</a>
           <a class="pill ghost" href="${PDF}" download>Download the PDF ↓</a>
         </div>
       </div>
